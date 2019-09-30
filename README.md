@@ -41,9 +41,9 @@ BRAN in essence, consists of these components:
 - Raspberry Pi Model 3B+
 - Basic Pi Camera Module (5MP) - to stream in the video captured at the entrance
 - OpenCV based facial recognition
-- **[Hodor]**(https://medium.com/ki-labs-engineering/hodor-controlling-the-office-door-from-slack-a79e77635e39) - Our existing door opening application
+- [Hodor](https://medium.com/ki-labs-engineering/hodor-controlling-the-office-door-from-slack-a79e77635e39) - Our existing door opening application
 
-BRAN is also our first attempt at understanding and evaluating simple facial recognition algorithms such as Haar Cascade Classifiers to more complex ones such as HOG, Linear SVM and CNNs.
+BRAN is also our first attempt at understanding and evaluating simple facial detection algorithms such as Haar Cascade Classifiers to more complex ones such as HOG, Linear SVM and CNNs.
 
 ### Installation
 
