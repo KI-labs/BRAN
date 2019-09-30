@@ -16,6 +16,7 @@ A Facial recognition based identification & authentication system at [KI labs](h
 - [Installation](#installation)
   - [Commands](#commands)
 - [Directory Structure](#file-structure)
+-  [Usage](#usage)
   - [Encode Faces](#usage)
     - [Hog method](#usage)
     - [CNN method](#usage)
@@ -103,6 +104,8 @@ Add a file structure here with the basic details about files, below is an exampl
 ├── setup.py
 └── shape_predictor_68_face_landmarks.dat
 ```
+
+## Usage
 
 ### Encode Faces
 #### Hog method
