@@ -172,8 +172,10 @@ def detect(cascade, encodings, shape_predictor, model_name, confidence, path_mod
                 mouth_shapes = []
                 mouth_shapes_after_smile = []
                 smile_flag = False
-                # if max_similarity > SIMILARITY_THRESHOLD and names[-1] != 'Unknown' and pi_camera:
-                print('INFO - {}'.format(requests.post(HODOR_API, json={})))
+                # uncomment the following line to post to an API endpoint if any
+                print('INFO - {}'.format("Invoking Hodor"))
+                # uncomment the following line to post to an API endpoint if any
+                # print('INFO - {}'.format(requests.post(HODOR_API, json={})))
                 time.sleep(WAIT_SECS)
                 key_pattern.clean_memory()
 
