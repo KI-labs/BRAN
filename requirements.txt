@@ -8,5 +8,3 @@ scikit-learn>=0.20.1
 click>=7.0
 requests>=2.21.0
 numpy>=1.8.2
-scipy>=0.13.3
-requests
