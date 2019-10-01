@@ -5,9 +5,11 @@
 
 **B**asic **R**ecognition and **A**uthentication at e**N**trance
 
+![alt text](assets/logo.png "BRAN")
+
 A Facial recognition based identification & authentication system at [KI labs](https://ki-labs.com/).
 
-![alt text](assets/logo.png "BRAN")
+![gif](assets/bran.gif)
 
 ## Index
 
