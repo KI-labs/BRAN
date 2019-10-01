@@ -70,7 +70,7 @@ def detect(cascade, encodings, shape_predictor, model_name, confidence, path_mod
     key = np.zeros(shape=(len(liveliness_pattern),))
     key[idx] = 1
 
-    key_pattern = KeyPattern(key, 20)
+    key_pattern = KeyPattern(key=key, memory=2)
 
     # load the known faces and embeddings along with OpenCV's Haar
     # cascade for face detection
@@ -167,6 +167,8 @@ def detect(cascade, encodings, shape_predictor, model_name, confidence, path_mod
             if smile_flag:
                 mouth_shapes_after_smile = mouth_shapes
 
+            # Uncomment this line if you want to use a smile pattern matching
+            # if max_similarity > SIMILARITY_THRESHOLD and names[-1] != 'Unknown':
             if smile_flag and mouth_shapes_after_smile[-1] < 0.1 and names[-1] != 'Unknown':
                     # and pi_camera:
                 mouth_shapes = []
