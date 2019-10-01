@@ -63,7 +63,7 @@ def detect(cascade, encodings, shape_predictor, model_name, confidence, path_mod
     # THE SEQUENCE SHOULD BE DEFINED MANUALLY
     liveliness_pattern = list(liveliness_pattern)
 
-    unique = np.unique(liveliness_pattern)x
+    unique = np.unique(liveliness_pattern)
     assert 'x' in unique and 'o' in unique
 
     idx = np.array(liveliness_pattern) == 'x'
@@ -161,21 +161,19 @@ def detect(cascade, encodings, shape_predictor, model_name, confidence, path_mod
 
             draw_rectangles(boxes, frame, names)
 
+            if not smile_flag:
+                print("Please smile to enter")
+
             if smile_flag:
                 mouth_shapes_after_smile = mouth_shapes
-                print(mouth_shapes_after_smile[-1])
-
-            print(smile_flag)
 
             if smile_flag and mouth_shapes_after_smile[-1] < 0.1 and names[-1] != 'Unknown':
                     # and pi_camera:
-                print(mouth_shapes_after_smile[-1])
                 mouth_shapes = []
                 mouth_shapes_after_smile = []
                 smile_flag = False
                 # if max_similarity > SIMILARITY_THRESHOLD and names[-1] != 'Unknown' and pi_camera:
                 print('INFO - {}'.format(requests.post(HODOR_API, json={})))
-                print("Post request")
                 time.sleep(WAIT_SECS)
                 key_pattern.clean_memory()
 

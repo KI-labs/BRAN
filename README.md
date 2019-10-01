@@ -9,7 +9,7 @@
 
 A Facial recognition based identification & authentication system at [KI labs](https://ki-labs.com/).
 
-![gif](<iframe src="https://giphy.com/embed/XyCxkf9j9TCRnMpFws" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/got-bran-facialrecognition-XyCxkf9j9TCRnMpFws">via GIPHY</a></p>)
+![gif](assets/bran.gif)
 
 ## Index
 
