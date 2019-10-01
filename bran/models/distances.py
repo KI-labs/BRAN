@@ -8,7 +8,7 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 UNKNOWN = -1
 
 
-class DistanceVoting(BaseEstimator, ClassifierMixin):
+class DistanceMinAvg(BaseEstimator, ClassifierMixin):
 
     def __init__(self, face2vec=None, confidence=0.5):
         self.face2vec = face2vec
@@ -40,7 +40,7 @@ class DistanceVoting(BaseEstimator, ClassifierMixin):
         return final_idx
 
 
-class DistanceMinAvg(BaseEstimator, ClassifierMixin):
+class DistanceVoting(BaseEstimator, ClassifierMixin):
 
     def __init__(self, face2vec=None, confidence=0.5):
         """
