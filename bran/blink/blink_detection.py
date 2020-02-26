@@ -8,20 +8,24 @@ import dlib
 
 
 class KeyPattern(object):
-    """
-    Check if a recorded pattern of zeros and ones
+    """Check if a recorded pattern of zeros and ones
     matches with a predefined key.
     """
 
-    def __init__(self, key, memory=20):
+    def __init__(self, key, memory=2):
+        """
+        :param key:
+            pattern of zeros and ones the represents a sequence of blinks or smiles
+        :param memory:
+            list of last n pattern comparisons
+        """
         self.key = key
         self.length = max(len(key), 1)
         self.pattern = np.zeros(shape=self.length)
         self.similarities = np.zeros(shape=memory)
 
     def update(self, pattern_new_el):
-        """
-        add the new element in the end of the array
+        """Add the new element in the end of the array,
         drop the oldest (first) element from the array
         """
         self.pattern[:-1] = self.pattern[1:]
@@ -40,6 +44,14 @@ class KeyPattern(object):
         return self.similarities[-1]
 
     def max_similarity(self):
+        """Maximum similarity from the last `memory` pattern comparisons.
+
+        If `memory`=2 and you have generated a pattern whose similarity with the key is above
+        the threshold but at that moment your face was not recognized in the next frame you
+        get the chance to use this similarity (since it is stored in the similarities list).
+
+        If `memory`=n you have this chance for the next `n-1` frames.
+        """
         return self.similarities.max()
 
     def clean_memory(self):
